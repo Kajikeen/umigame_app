@@ -1,0 +1,18 @@
+<header class="container">
+  <nav class="font-weight-bold navbar navbar-expand navbar-dark bg-info fixed-top">
+    <h1 class="display-5">
+      <%= link_to "ウミガメのスープ", "", id: "logo", class: "navbar-brand" %>
+    </h1>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to "新規投稿", "/posts/new", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "投稿一覧", "/posts/index", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Logout", "/", class: "nav-link" %>
+      </li>
+    </ul>
+  </nav>
+</header>

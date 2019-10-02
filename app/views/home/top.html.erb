@@ -1,0 +1,22 @@
+<style media="screen">
+  body {
+    margin-top: 100px;
+  }
+</style>
+
+<body>
+  <section class="py-5 jumbotron">
+    <div class="container text-center">
+      <%= form_tag("/posts/index") do %>
+        <p class="pt-2">メールアドレス</p>
+        <input name="email" value="<%= @email %>" class="mb-3 ">
+        <p class="pt-2">パスワード</p>
+        <input type="password" name="password" value="<%= @password %>" class="mb-3">
+        <p><input type="submit" value="ログイン" class="btn btn-primary mt-4"></p>
+      <% end %>
+    </div>
+    <div class="text-center">
+      <%= link_to "新規登録", "/signup" %>
+    </div>
+  </section>
+</body>
