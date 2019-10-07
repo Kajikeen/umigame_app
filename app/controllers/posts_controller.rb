@@ -2,25 +2,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    @user = User.find(params[:id])
   end
 
   def show
     @post = Post.find_by(id: params[:id])
-    @user = @post.user
-    @likes_count = Like.where(post_id: @post.id).count
-    @question = Question.new(
-      content: params[:content]
-    )
-    @question_view = Question.where(
-      post_id: @post.id,
-    )
-    @question_view_user = Question.where(
-      post_id: @post.id,
-      answer:["YES!","NO!"],
-    )
-    @good = Question.find_by(id: params[:id])
-    end
+  end
 
   def new
     @post = Post.new
