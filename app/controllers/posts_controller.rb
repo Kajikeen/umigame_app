@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     @post = Post.new(
       content: params[:content],
       title: params[:title],
-      answer: params[:answer],
       user_id: @current_user.id
     )
     if @post.save
